@@ -1,0 +1,17 @@
+.sidebar {
+    width: 52px;
+    height: 708px;
+    background: rgba(85, 13, 201, 1);
+}
+.logoBox {
+    display: flex;
+    justify-content: center;
+    width: 52px;
+    height: 32px;
+    background: rgba(68, 11, 160, 1);
+}
+.sideLogo {
+    margin: auto;
+    width: 16px;
+    height: 15px;
+}
