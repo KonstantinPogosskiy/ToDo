@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Input from "../UI/Input/Input";
 import Button from "../UI/Button/Button";
-import './Form.css';
+import classes from './Form.module.css';
 
 const Form = (props) => {
     const [value, setValue] = useState('');
@@ -12,17 +12,17 @@ const Form = (props) => {
     }
 
     return (
-            <form onSubmit={add}>
-                <Input
-                    onChange={(e) => {
-                        setValue(e.target.value)
-                    }
-                    }
-                    placeholder={'+ Add a task, press Enter to save'}
-                    type={'text'}
-                />
-                <Button>Add</Button>
-            </form>
+        <form onSubmit={add}>
+            <Input
+                onChange={e => setValue(e.target.value)}
+                placeholder={'+ Add a task, press Enter to save'}
+                type={'text'}
+            />
+            <Button
+                className={classes.button}>
+                Add
+            </Button>
+        </form>
     );
 };
 

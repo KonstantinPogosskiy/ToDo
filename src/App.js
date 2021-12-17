@@ -13,6 +13,9 @@ function App() {
     const createTask = (newTask) => {
         setTasks([...tasks, newTask])
     }
+    const deleteTask = (newTask) => {
+        tasks.pop()
+    }
     return (
         <div className="App">
             <Navbar
@@ -26,7 +29,7 @@ function App() {
                 <Sidebar sideImg={'/assets/images/Sidebar.svg'}/>
                 <div>
                     <Form createTask={createTask}/>
-                    <ActualTasksList task={tasks}/>
+                    <ActualTasksList deleteTask={deleteTask} task={tasks}/>
                 </div>
                 <CompletedTasksList task={comTasks}/>
             </div>
