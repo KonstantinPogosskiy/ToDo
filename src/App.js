@@ -20,7 +20,6 @@ console.log(actualTasks)
                 setCompletedTasks([...completedTasks, actualTasks[i]])
                 actualTasks.splice(i, 1)
             }
-
         }
     }
 
