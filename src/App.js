@@ -7,15 +7,23 @@ import CompletedTasksList from "./Components/CompletedTasksList/CompletedTasksLi
 import {useState} from "react";
 
 function App() {
-    const [tasks, setTasks] = useState([]);
-    const [comTasks, setComTasks] = useState([]);
+    const [actualTasks, setActualTasks] = useState([]);
+    const [completedTasks, setCompletedTasks] = useState([]);
 
     const createTask = (newTask) => {
-        setTasks([...tasks, newTask])
+        setActualTasks([...actualTasks, newTask])
     }
-    const deleteTask = (newTask) => {
-        tasks.pop()
+    const removeTask = (post) => {
+console.log(actualTasks)
+        for(let i = 0; i < actualTasks.length; i++) {
+            if(actualTasks[i].id === post) {
+                setCompletedTasks([...completedTasks, actualTasks[i]])
+                actualTasks.splice(i, 1)
+            }
+
+        }
     }
+
     return (
         <div className="App">
             <Navbar
@@ -29,9 +37,9 @@ function App() {
                 <Sidebar sideImg={'/assets/images/Sidebar.svg'}/>
                 <div>
                     <Form createTask={createTask}/>
-                    <ActualTasksList deleteTask={deleteTask} task={tasks}/>
+                    <ActualTasksList remove={removeTask} task={actualTasks}/>
                 </div>
-                <CompletedTasksList task={comTasks}/>
+                <CompletedTasksList task={completedTasks}/>
             </div>
         </div>
     );

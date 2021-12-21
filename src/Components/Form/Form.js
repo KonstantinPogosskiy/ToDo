@@ -4,17 +4,22 @@ import Button from "../UI/Button/Button";
 import classes from './Form.module.css';
 
 const Form = (props) => {
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState({body: ''});
 
     const add = (e) => {
         e.preventDefault()
-        props.createTask(value)
+        const newTask = {
+            ...value, id: Date.now()
+        }
+        props.createTask(newTask)
+        setValue({body: ''})
     }
 
     return (
         <form onSubmit={add}>
             <Input
-                onChange={e => setValue(e.target.value)}
+                value={value.body}
+                onChange={e => setValue( {...value, body: e.target.value})}
                 placeholder={'+ Add a task, press Enter to save'}
                 type={'text'}
             />

@@ -8,7 +8,7 @@ const ActualTasksList = (props) => {
             <h2>To do ({props.task.length})</h2>
             <div className="actual_tasks">
                 {props.task.map(task =>
-                    <Task deleteTask={props.deleteTask} task={task}/>
+                    <Task remove={props.remove} task={task} key={props.id}/>
                 )}
             </div>
         </div>
