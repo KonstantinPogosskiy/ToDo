@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from "./Task.module.css";
-import Button from "../UI/Button/Button";
 
 const Task = (props) => {
 
