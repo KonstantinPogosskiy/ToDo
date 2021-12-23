@@ -4,8 +4,14 @@
 .App {
 
 }
-
+.navbar {
+  width: 1920px;
+  margin: auto;
+}
 .wrapper {
   display: flex;
-
+  justify-content: space-between;
+  width: 1920px;
+  height: 100vh;
+  margin: auto;
 }

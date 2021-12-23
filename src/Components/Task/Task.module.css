@@ -1,7 +1,6 @@
 .task {
     display: flex;
     justify-content: space-between;
-    width: 1228px;
     height: 48px;
     margin: 8px 0 0 0;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08);

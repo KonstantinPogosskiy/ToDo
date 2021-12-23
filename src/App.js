@@ -34,13 +34,15 @@ function App() {
 
     return (
         <div className="App">
-            <Navbar
-                App_name={'To-Do'}
-                logo_source={'/assets/images/Vector.svg'}
-                user={'Leanne Graham'}
-                avatar={'/assets/images/Avatar.svg'}
-                alt={'avatar'}
-            />
+            <div className="navbar">
+                <Navbar
+                    App_name={'To-Do'}
+                    logo_source={'/assets/images/Vector.svg'}
+                    user={'Leanne Graham'}
+                    avatar={'/assets/images/Avatar.svg'}
+                    alt={'avatar'}
+                />
+            </div>
             <div className="wrapper">
                 <Sidebar sideImg={'/assets/images/Sidebar.svg'}/>
                 <div>

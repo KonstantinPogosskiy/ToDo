@@ -10,9 +10,13 @@
     font-size: 6px;
     font-family: 'Open Sans', sans-serif;
 }
+.logoBoard p {
+    padding: 0 0 0 15px;
+}
 .logo {
     width: 32px;
     height: 32px;
+    padding: 15px 0 0 10px;
 }
 .desc {
     width: 60%;
