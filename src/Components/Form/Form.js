@@ -15,7 +15,6 @@ const Form = (props) => {
             props.createTask(newTask)
             setValue({body: ''})
         }
-
     }
 
     return (

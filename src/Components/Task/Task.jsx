@@ -1,19 +1,20 @@
 import React from 'react';
-import classes from "./Task.module.css";
+import "./Task.css";
 
 const Task = (props) => {
 
     return (
-        <div className={classes.task}>
-            <div className={classes.checkbox}>
+        <div className="task">
+            <div className="checkbox">
                 <input
                     type="checkbox"
+                    checked={props.checked}
                     onChange={() => props.movingTask(props.task.id)}/>
             </div>
-            <div className={classes.body}>
+            <div className="body">
                 {props.task.body}
             </div>
-            <div className={classes.buttonCase} >
+            <div className="buttonCase">
                 {props.children}
             </div>
         </div>

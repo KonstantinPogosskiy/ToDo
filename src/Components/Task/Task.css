@@ -6,17 +6,9 @@
     margin: 8px 0 0 0;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08);
 }
-.button {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    border: none;
-    background: none;
-    padding: 0;
-}
 .checkbox {
     display: flex;
-    width: 3%;
+    padding-left: 12px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
