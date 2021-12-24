@@ -14,20 +14,16 @@ function App() {
         setActualTasks([...actualTasks, newTask])
     }
     const removeActualTask = (task) => {
-
+        setActualTasks(actualTasks.filter(p => p.id !== task))
+    }
+    const removeCompletedTask = (task) => {
+        setCompletedTasks(completedTasks.filter(p => p.id !== task))
+    }
+    const movingTask = (task) => {
         for(let i = 0; i < actualTasks.length; i++) {
             if(actualTasks[i].id === task) {
                 setCompletedTasks([...completedTasks, actualTasks[i]])
-                setActualTasks(actualTasks.filter(p => p.id !== task))
-            }
-        }
-    }
-
-    const removeCompletedTask = (task) => {
-
-        for(let i = 0; i < completedTasks.length; i++) {
-            if(completedTasks[i].id === task) {
-                setCompletedTasks(completedTasks.filter(p => p.id !== task))
+                removeActualTask(task)
             }
         }
     }
@@ -47,9 +43,14 @@ function App() {
                 <Sidebar sideImg={'/assets/images/Sidebar.svg'}/>
                 <div>
                     <Form createTask={createTask}/>
-                    <ActualTasksList remove={removeActualTask} task={actualTasks}/>
+                    <ActualTasksList
+                        remove={removeActualTask}
+                        task={actualTasks}
+                        movingTask={movingTask}/>
                 </div>
-                <CompletedTasksList remove={removeCompletedTask} task={completedTasks}/>
+                <CompletedTasksList
+                    remove={removeCompletedTask}
+                    task={completedTasks}/>
             </div>
         </div>
     );

@@ -6,7 +6,9 @@ const Task = (props) => {
     return (
         <div className={classes.task}>
             <div className={classes.checkbox}>
-                <input type="checkbox"/>
+                <input
+                    type="checkbox"
+                    onChange={() => props.movingTask(props.task.id)}/>
             </div>
             <div className={classes.body}>
                 {props.task.body}

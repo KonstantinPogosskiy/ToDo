@@ -8,18 +8,22 @@ const Form = (props) => {
 
     const add = (e) => {
         e.preventDefault()
-        const newTask = {
-            ...value, id: Date.now()
+        if (value.body !== '') {
+            const newTask = {
+                ...value, id: Date.now()
+            }
+            props.createTask(newTask)
+            setValue({body: ''})
         }
-        props.createTask(newTask)
-        setValue({body: ''})
+
     }
 
     return (
         <form onSubmit={add}>
             <Input
                 value={value.body}
-                onChange={e => setValue( {...value, body: e.target.value})}
+                onChange={e => setValue({...value, body: e.target.value})
+                }
                 placeholder={'+ Add a task, press Enter to save'}
                 type={'text'}
             />
