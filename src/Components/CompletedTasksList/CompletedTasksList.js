@@ -12,7 +12,9 @@ const CompletedTasksList = (props) => {
                     <Task
                         checked={true}
                         task={task}
-                        key={props.id}>
+                        key={props.id}
+                        moving={props.moving}
+                    >
                         <Button
                             onClick={() => props.remove(task.id)}
                         >

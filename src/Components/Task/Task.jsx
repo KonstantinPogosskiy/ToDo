@@ -9,7 +9,7 @@ const Task = (props) => {
                 <input
                     type="checkbox"
                     checked={props.checked}
-                    onChange={() => props.movingTask(props.task.id)}/>
+                    onChange={() => props.moving(props.task.id)}/>
             </div>
             <div className="body">
                 {props.task.body}

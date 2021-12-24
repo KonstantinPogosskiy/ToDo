@@ -3,6 +3,7 @@
 }
 .App {
   font-family: 'Open Sans', sans-serif;
+
 }
 .navbar {
   width: 1920px;
@@ -12,6 +13,5 @@
   display: flex;
   justify-content: space-between;
   width: 1920px;
-  height: 100vh;
   margin: auto;
 }

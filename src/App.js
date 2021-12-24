@@ -19,11 +19,19 @@ function App() {
     const removeCompletedTask = (task) => {
         setCompletedTasks(completedTasks.filter(p => p.id !== task))
     }
-    const movingTask = (task) => {
+    const completeTask = (task) => {
         for(let i = 0; i < actualTasks.length; i++) {
             if(actualTasks[i].id === task) {
                 setCompletedTasks([...completedTasks, actualTasks[i]])
                 removeActualTask(task)
+            }
+        }
+    }
+    const returnTask = (task) => {
+        for(let i = 0; i < completedTasks.length; i++) {
+            if(completedTasks[i].id === task) {
+                setActualTasks([...actualTasks, completedTasks[i]])
+                removeCompletedTask(task)
             }
         }
     }
@@ -46,11 +54,13 @@ function App() {
                     <ActualTasksList
                         remove={removeActualTask}
                         task={actualTasks}
-                        movingTask={movingTask}/>
+                        moving={completeTask}/>
                 </div>
                 <CompletedTasksList
                     remove={removeCompletedTask}
-                    task={completedTasks}/>
+                    task={completedTasks}
+                    moving={returnTask}
+                />
             </div>
         </div>
     );

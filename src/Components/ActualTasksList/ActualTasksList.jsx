@@ -14,8 +14,7 @@ const ActualTasksList = (props) => {
                     <Task
                         task={task}
                         key={props.id}
-                        remove={props.remove}
-                        movingTask={props.movingTask}>
+                        moving={props.moving}>
                         <Button>
                             <img src="/assets/images/Edit.svg" alt="edit"/>
                         </Button>
