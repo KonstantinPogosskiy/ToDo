@@ -21,13 +21,13 @@ const Form = (props) => {
         <form onSubmit={add}>
             <Input
                 value={value.body}
-                onChange={e => setValue({...value, body: e.target.value})
-                }
+                onChange={e => setValue({...value, body: e.target.value})}
                 placeholder={'+ Add a task, press Enter to save'}
                 type={'text'}
             />
             <Button
-                className={classes.button}>
+                className={classes.button}
+            >
                 Add
             </Button>
         </form>

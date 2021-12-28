@@ -11,9 +11,7 @@ const Task = (props) => {
                     checked={props.checked}
                     onChange={() => props.moving(props.task.id)}/>
             </div>
-            <div className="body">
-                {props.task.body}
-            </div>
+            <input className="body" value={props.task.body} disabled={props.disabled}/>
             <div className="buttonCase">
                 {props.children}
             </div>

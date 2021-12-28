@@ -2,6 +2,10 @@
     width: 616px;
     margin: 24px 8px 0 64px;
 }
+.completed_tasks {
+    text-decoration: line-through;
+    color: rgb(163, 163, 163);
+}
 .button {
     width: 20px;
     height: 20px;

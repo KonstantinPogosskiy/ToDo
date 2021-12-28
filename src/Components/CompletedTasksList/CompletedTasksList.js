@@ -10,6 +10,7 @@ const CompletedTasksList = (props) => {
             <div className="completed_tasks">
                 {props.task.map(task =>
                     <Task
+                        disabled={true}
                         checked={true}
                         task={task}
                         key={props.id}
