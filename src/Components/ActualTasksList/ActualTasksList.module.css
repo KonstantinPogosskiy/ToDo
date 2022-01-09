@@ -1,0 +1,16 @@
+.actual_area {
+    width: 1252px;
+    height: 100%;
+    margin: 20px 8px 0 24px;
+}
+h2 {
+    font-size: 16px;
+}
+.button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}

@@ -1,19 +1,30 @@
 import './App.css';
-import Navbar from "./Components/UI/Navbar/Navbar";
-import Form from "./Components/Form/Form";
-import Sidebar from "./Components/UI/Sidebar/Sidebar";
+import React, {useState} from "react";
+import Header from "./Components/Header/Header";
+import Sidebar from "./Components/Sidebar/Sidebar";
 import ActualTasksList from "./Components/ActualTasksList/ActualTasksList";
 import CompletedTasksList from "./Components/CompletedTasksList/CompletedTasksList";
-import React, {useState} from "react";
-import MyModal from "./Components/UI/Modal/MyModal";
 import Input from "./Components/UI/Input/Input";
 import Button from "./Components/UI/Button/Button";
+import classes from '../src/Components/UI/Button/Button.module.css';
 
 function App() {
     const [actualTasks, setActualTasks] = useState([]);
     const [completedTasks, setCompletedTasks] = useState([]);
-    const [modal, setModal] = useState(false);
+    const [value, setValue] = useState({body: ''});
+    const [taskInputValue, setTaskInputValue] = useState('');
+    const [editId, setEditId] = useState('');
 
+    const addTask = (e) => {
+        e.preventDefault()
+        if (value.body !== '') {
+            const newTask = {
+                ...value, id: Date.now()
+            }
+            createTask(newTask)
+            setValue({body: ''})
+        }
+    }
     const createTask = (newTask) => {
         setActualTasks([...actualTasks, newTask])
     }
@@ -39,37 +50,35 @@ function App() {
             }
         }
     }
-const editEntries = (task) => {
-    setActualTasks(actualTasks.filter(item => item.id !== task))
 
-    const selectedItems = actualTasks.find(item => item.id === task)
-}
     return (
         <div className="App">
-            <div className="navbar">
-                <Navbar
-                    App_name={'To-Do'}
-                    logo_source={'/assets/images/Vector.svg'}
-                    user={'Leanne Graham'}
-                    avatar={'/assets/images/Avatar.svg'}
-                    alt={'avatar'}
-                />
-            </div>
-            <MyModal visible={modal} setVisible={setModal}>
-                <Form selectedItems={editEntries.selectedItems}/>
-            </MyModal>
+            <Header
+                App_name={'To-Do'}
+                logo_source={'/assets/images/Vector.svg'}
+                user={'Leanne Graham'}
+                avatar={'/assets/images/Avatar.svg'}
+                alt={'avatar'}
+            />
             <div className="wrapper">
                 <Sidebar sideImg={'/assets/images/Sidebar.svg'}/>
                 <div>
-                    <Form
-                        createTask={createTask}
+                    <Input
+                        value={value.body}
+                        onChange={e => setValue({...value, body: e.target.value})}
+                        placeholder={'+ Add a task, press Enter to save'}
+                        type={'text'}
                     />
+                    <Button className={classes.button} onClick={addTask}>
+                        Add
+                    </Button>
+                    <h3>Total: {actualTasks.length + completedTasks.length}</h3>
                     <ActualTasksList
-                        editEntries={editEntries}
-                        setModal={setModal}
+                        setTaskInputValue={setTaskInputValue}
                         remove={removeActualTask}
                         task={actualTasks}
-                        moving={completeTask}/>
+                        moving={completeTask}
+                    />
                 </div>
                 <CompletedTasksList
                     remove={removeCompletedTask}

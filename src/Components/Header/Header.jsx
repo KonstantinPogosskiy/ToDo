@@ -1,9 +1,9 @@
 import React from 'react';
-import './Navbar.css';
+import './Header.css';
 
-const Navbar = (props) => {
+const Header = (props) => {
     return (
-        <div className="Navbar">
+        <div className="header">
             <div className="logoBoard">
                 <img className="logo" alt='logo' src={props.logo_source}/>
                 <p>{props.App_name}</p>
@@ -19,4 +19,4 @@ const Navbar = (props) => {
     );
 };
 
-export default Navbar;
+export default Header;

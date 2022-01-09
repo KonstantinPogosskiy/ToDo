@@ -1,9 +1,9 @@
-.Navbar {
+.header {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 64px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 5px -5px rgba(34, 60, 80, 0.6);
 }
 .logoBoard {
     width: 3%;

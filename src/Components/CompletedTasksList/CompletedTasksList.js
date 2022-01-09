@@ -1,28 +1,32 @@
 import React from 'react';
-import './CompletedTasksList.css';
+import './CompletedTasksList.module.css';
 import Task from "../Task/Task";
 import Button from "../UI/Button/Button";
+import classes from "../CompletedTasksList/CompletedTasksList.module.css";
 
 const CompletedTasksList = (props) => {
     return (
-        <div className="completed_area">
-            <h2>Completed ({props.task.length})</h2>
-            <div className="completed_tasks">
-                {props.task.map(task =>
-                    <Task
-                        disabled={true}
-                        checked={true}
-                        task={task}
-                        key={props.id}
-                        moving={props.moving}
-                    >
-                        <Button
-                            onClick={() => props.remove(task.id)}
+        <div>
+            <div className={classes.completed_area}>
+                <h2>Completed ({props.task.length})</h2>
+                <div className={classes.completed_tasks}>
+                    {props.task.map(task =>
+                        <Task
+                            disabled={true}
+                            checked={true}
+                            task={task}
+                            key={props.id}
+                            moving={props.moving}
                         >
-                            <img src="/assets/images/Garbage.svg" alt="garbage"/>
-                        </Button>
-                    </Task>
-                )}
+                            <Button
+                                className={classes.button}
+                                onClick={() => props.remove(task.id)}
+                            >
+                                <img src="/assets/images/Garbage.svg" alt="garbage"/>
+                            </Button>
+                        </Task>
+                    )}
+                </div>
             </div>
         </div>
     );

@@ -1,9 +1,12 @@
 .completed_area {
-    width: 616px;
-    margin: 24px 8px 0 64px;
+    width: 530px;
+    margin: 24px 8px 0 46px;
 }
 .completed_tasks {
     text-decoration: line-through;
+    color: rgb(163, 163, 163);
+}
+.completed_tasks input {
     color: rgb(163, 163, 163);
 }
 .button {
@@ -13,10 +16,4 @@
     border: none;
     background: none;
     padding: 0;
-}
-.buttonCase {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 5%;
 }
