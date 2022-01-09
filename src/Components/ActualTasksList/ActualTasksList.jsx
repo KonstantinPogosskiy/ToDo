@@ -13,8 +13,6 @@ const ActualTasksList = (props) => {
             <div className={classes.actual_tasks}>
                 {props.task.map(task =>
                     <Task
-                        setTaskInputValue={props.setTaskInputValue}
-                        disabled={edit}
                         checked={false}
                         task={task}
                         key={props.id}

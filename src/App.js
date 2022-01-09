@@ -12,7 +12,6 @@ function App() {
     const [actualTasks, setActualTasks] = useState([]);
     const [completedTasks, setCompletedTasks] = useState([]);
     const [value, setValue] = useState({body: ''});
-    const [taskInputValue, setTaskInputValue] = useState('');
     const [editId, setEditId] = useState('');
 
     const addTask = (e) => {
@@ -74,7 +73,6 @@ function App() {
                     </Button>
                     <h3>Total: {actualTasks.length + completedTasks.length}</h3>
                     <ActualTasksList
-                        setTaskInputValue={setTaskInputValue}
                         remove={removeActualTask}
                         task={actualTasks}
                         moving={completeTask}

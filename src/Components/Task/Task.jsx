@@ -11,11 +11,9 @@ const Task = (props) => {
                     checked={props.checked}
                     onChange={() => props.moving(props.task.id)}/>
             </div>
-            <input
-                onChange={e => props.setTaskInputValue({body: e.target.value})}
-                className={classes.body}
-                value={props.task.body}
-                disabled={props.disabled}/>
+            <div className={classes.body}>
+                {props.task.body}
+            </div>
             <div className={classes.buttonCase}>
                 {props.children}
             </div>
