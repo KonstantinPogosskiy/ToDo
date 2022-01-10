@@ -13,6 +13,7 @@ function App() {
     const [completedTasks, setCompletedTasks] = useState([]);
     const [value, setValue] = useState({body: ''});
     const [editId, setEditId] = useState('');
+    const [editInput, setEditInput] = useState('');
 
     const addTask = (e) => {
         e.preventDefault()
@@ -76,6 +77,7 @@ function App() {
                         remove={removeActualTask}
                         task={actualTasks}
                         moving={completeTask}
+                        setEditId={setEditId}
                     />
                 </div>
                 <CompletedTasksList

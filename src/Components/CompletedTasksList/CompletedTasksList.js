@@ -14,6 +14,8 @@ const CompletedTasksList = (props) => {
                         <Task
                             disabled={true}
                             checked={true}
+                            taskState={'complete'}
+                            remove={props.remove}
                             task={task}
                             key={props.id}
                             moving={props.moving}
