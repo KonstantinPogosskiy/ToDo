@@ -17,6 +17,7 @@ const ActualTasksList = (props) => {
                         task={task}
                         key={props.id}
                         moving={props.moving}
+                        changeTask={props.changeTask}
                     >
                     </Task>
                 )}

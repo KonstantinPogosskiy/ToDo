@@ -15,7 +15,7 @@ const Task = (props) => {
                     onChange={() => props.moving(props.task.id)}/>
             </div>
             {edit === true
-                ? <EditInput/>
+                ? <EditInput changeTask={props.changeTask}/>
                 : <div className={classes.body}>
                     {props.task.body}
                 </div>
@@ -23,17 +23,25 @@ const Task = (props) => {
 
             {props.taskState === 'actual'
                 ? <div className={classes.buttonCase}>
-                    <Button
-                        className={classes.button}
-                        onClick={() => {
-                            edit === true ? setEdit(false) : setEdit(true)
-                            props.setEditId(props.task.id)
-                        }
-                        }
-                    >
-                        <img src="/assets/images/Edit.svg" alt="edit"/>
+                    {edit === false
+                        ? <Button
+                            className={classes.button}
+                            onClick={() => {
+                                edit === true ? setEdit(false) : setEdit(true)
+                                props.setEditId(props.task.id)
+                            }
+                            }
+                        >
+                            <img src="/assets/images/Edit.svg" alt="edit"/>
 
-                    </Button>
+                        </Button>
+                        : <Button
+                            className={classes.button}
+                            onClick={() => edit === true ? setEdit(false) : setEdit(true)}
+                        >
+                            <img src="/assets/images/Check.svg" alt="check"/>
+                        </Button>
+                    }
                     <Button
                         className={classes.button}
                         onClick={() => props.remove(props.task.id)}

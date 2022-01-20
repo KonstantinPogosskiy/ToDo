@@ -50,6 +50,13 @@ function App() {
             }
         }
     }
+    const changeTask = (task) => {
+        for (let i = 0; i < actualTasks.length; i++) {
+            if(i.id = editId) {
+                setActualTasks([...actualTasks, actualTasks[i].body = editInput])
+            }
+        }
+    }
 
     return (
         <div className="App">
@@ -78,6 +85,7 @@ function App() {
                         task={actualTasks}
                         moving={completeTask}
                         setEditId={setEditId}
+                        changeTask={changeTask}
                     />
                 </div>
                 <CompletedTasksList
