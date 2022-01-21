@@ -18,6 +18,8 @@ const ActualTasksList = (props) => {
                         key={props.id}
                         moving={props.moving}
                         changeTask={props.changeTask}
+                        setValueEditInput={props.setValueEditInput}
+                        setEditId={props.setEditId}
                     >
                     </Task>
                 )}

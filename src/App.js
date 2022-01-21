@@ -13,7 +13,7 @@ function App() {
     const [completedTasks, setCompletedTasks] = useState([]);
     const [value, setValue] = useState({body: ''});
     const [editId, setEditId] = useState('');
-    const [editInput, setEditInput] = useState('');
+    const [valueEditInput, setValueEditInput] = useState('');
 
     const addTask = (e) => {
         e.preventDefault()
@@ -50,10 +50,11 @@ function App() {
             }
         }
     }
-    const changeTask = (task) => {
+    const changeTask = () => {
         for (let i = 0; i < actualTasks.length; i++) {
-            if(i.id = editId) {
-                setActualTasks([...actualTasks, actualTasks[i].body = editInput])
+            if(actualTasks[i].id === editId) {
+                setActualTasks([...actualTasks, actualTasks[i].body = valueEditInput])
+                console.log(actualTasks)
             }
         }
     }
@@ -86,6 +87,7 @@ function App() {
                         moving={completeTask}
                         setEditId={setEditId}
                         changeTask={changeTask}
+                        setValueEditInput={setValueEditInput}
                     />
                 </div>
                 <CompletedTasksList

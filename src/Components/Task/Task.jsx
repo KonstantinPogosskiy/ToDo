@@ -6,6 +6,7 @@ import Button from "../UI/Button/Button";
 
 const Task = (props) => {
     const [edit, setEdit] = useState(false);
+
     return (
         <div className={classes.task}>
             <div className={classes.checkbox}>
@@ -15,7 +16,7 @@ const Task = (props) => {
                     onChange={() => props.moving(props.task.id)}/>
             </div>
             {edit === true
-                ? <EditInput changeTask={props.changeTask}/>
+                ? <EditInput setValueEditInput={props.setValueEditInput}/>
                 : <div className={classes.body}>
                     {props.task.body}
                 </div>
@@ -37,7 +38,10 @@ const Task = (props) => {
                         </Button>
                         : <Button
                             className={classes.button}
-                            onClick={() => edit === true ? setEdit(false) : setEdit(true)}
+                            onClick={() => {
+                                edit === true ? setEdit(false) : setEdit(true)
+                                props.changeTask()
+                            }}
                         >
                             <img src="/assets/images/Check.svg" alt="check"/>
                         </Button>
