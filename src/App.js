@@ -53,8 +53,7 @@ function App() {
     const changeTask = () => {
         for (let i = 0; i < actualTasks.length; i++) {
             if(actualTasks[i].id === editId) {
-                setActualTasks([...actualTasks, actualTasks[i].body = valueEditInput])
-                console.log(actualTasks)
+                setActualTasks(actualTasks(actualTasks[i].body = valueEditInput))
             }
         }
     }
