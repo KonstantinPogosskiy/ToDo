@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+html, body, .App, #root {
+    height: 100%;
+}
+
 .App {
     font-family: 'Open Sans', sans-serif;
     width: 1920px;
@@ -11,7 +15,7 @@
 .wrapper {
     display: flex;
     justify-content: space-between;
-    height: 700px;
+    height: calc(100% - 64px);
 }
 
 h3 {

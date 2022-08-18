@@ -1,7 +1,6 @@
 .sidebar {
     width: 52px;
-
-    background: rgba(85, 13, 201, 1);
+    background: rgb(85, 13, 201);
 }
 .logoBox {
     display: flex;

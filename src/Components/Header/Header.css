@@ -18,7 +18,7 @@
     padding: 15px 0 0 10px;
 }
 .desk {
-    width: 60%;
+    width: 75%;
     margin: auto 20px;
 }
 .desk h1 {
@@ -28,7 +28,7 @@
 .auth {
     align-items: center;
     display: flex;
-    margin: auto;
+    margin: auto 7px auto 7px;
     justify-content: right;
     width: 20%;
     height: 32px;
