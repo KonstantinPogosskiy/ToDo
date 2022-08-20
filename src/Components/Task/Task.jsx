@@ -3,7 +3,6 @@ import classes from "./Task.module.css";
 import EditInput from "../EditInput/EditInput";
 import Button from "../UI/Button/Button";
 
-
 const Task = (props) => {
     const [edit, setEdit] = useState(false);
 
@@ -33,7 +32,7 @@ const Task = (props) => {
                             }
                             }
                         >
-                            <img src="/assets/images/Edit.svg" alt="edit"/>
+                            <img src="Edit.svg" alt="edit"/>
 
                         </Button>
                         : <Button
@@ -43,14 +42,14 @@ const Task = (props) => {
                                 props.changeTask()
                             }}
                         >
-                            <img src="/assets/images/Check.svg" alt="check"/>
+                            <img src="Check.svg" alt="check"/>
                         </Button>
                     }
                     <Button
                         className={classes.button}
                         onClick={() => props.remove(props.task.id)}
                     >
-                        <img src="/assets/images/Garbage.svg" alt="garbage"/>
+                        <img src="Garbage.svg" alt="garbage"/>
                     </Button>
                 </div>
                 : <div className={classes.buttonCase}>
@@ -58,11 +57,10 @@ const Task = (props) => {
                         className={classes.button}
                         onClick={() => props.remove(props.task.id)}
                     >
-                        <img src="/assets/images/Garbage.svg" alt="garbage"/>
+                        <img src="Garbage.svg" alt="garbage"/>
                     </Button>
                 </div>
             }
-
         </div>
     );
 };

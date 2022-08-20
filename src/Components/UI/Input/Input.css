@@ -7,3 +7,9 @@
     margin: 24px 8px 0 24px;
     outline: none;
 }
+
+@media screen and (max-width: 896px) {
+    .input {
+        width: 72%;
+    }
+}

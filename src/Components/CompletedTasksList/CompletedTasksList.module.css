@@ -17,3 +17,9 @@
     background: none;
     padding: 0;
 }
+
+@media screen and (max-width: 896px) {
+    .completed_area {
+        width: 85%;
+    }
+}

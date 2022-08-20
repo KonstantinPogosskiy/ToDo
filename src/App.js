@@ -53,7 +53,7 @@ function App() {
     const changeTask = () => {
         for (let i = 0; i < actualTasks.length; i++) {
             if(actualTasks[i].id === editId) {
-                setActualTasks(actualTasks(actualTasks[i].body = valueEditInput))
+                setActualTasks(actualTasks(actualTasks[i].body = valueEditInput || actualTasks[i].body))
             }
         }
     }
@@ -62,13 +62,13 @@ function App() {
         <div className="App">
             <Header
                 App_name={'To-Do'}
-                logo_source={'/assets/images/Vector.svg'}
+                logo="Vector.svg"
                 user={'Leanne Graham'}
-                avatar={'/assets/images/Avatar.svg'}
+                avatar='Avatar.svg'
                 alt={'avatar'}
             />
             <div className="wrapper">
-                <Sidebar sideImg={'/assets/images/Sidebar.svg'}/>
+                <Sidebar sideImg='Sidebar.svg'/>
                 <div>
                     <Input
                         value={value.body}

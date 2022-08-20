@@ -18,6 +18,18 @@ html, body, .App, #root {
     height: calc(100% - 64px);
 }
 
+@media screen and (max-width: 896px) {
+    .App {
+        width: 414px;
+
+    }
+    .wrapper {
+        flex-direction: column;
+        justify-content: start;
+        height: calc(100% - 64px);
+    }
+}
+
 h3 {
     font-size: 12px;
     color: rgba(85, 13, 201, 1);

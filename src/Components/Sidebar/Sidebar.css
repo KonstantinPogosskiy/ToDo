@@ -2,6 +2,11 @@
     width: 52px;
     background: rgb(85, 13, 201);
 }
+@media screen and (max-width: 896px) {
+    .sidebar {
+        display: none;
+    }
+}
 .logoBox {
     display: flex;
     justify-content: center;

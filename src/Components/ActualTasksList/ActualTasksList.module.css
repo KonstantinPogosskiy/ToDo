@@ -5,3 +5,9 @@
 h2 {
     font-size: 16px;
 }
+
+@media screen and (max-width: 896px) {
+    .actual_area {
+        width: 90%;
+    }
+}

@@ -37,3 +37,28 @@
     font-size: 14px;
     margin: 0 8px 0 0;
 }
+@media screen and (max-width: 896px) {
+    .desk {
+        width: 40%;
+        margin: auto 0;
+    }
+    .logoBoard {
+        width: 20%;
+    }
+    .auth {
+        width: 36%;
+        justify-content: center;
+    }
+    .userName {
+        font-size: 11px;
+    }
+    .logo {
+        width: 30px;
+        height: 30px;
+        padding: 15px 0 0 25px;
+    }
+    .logoBoard p {
+        padding: 0 0 0 27px;
+        font-size: 9px;
+    }
+}
