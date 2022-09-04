@@ -69,7 +69,7 @@ function App() {
             />
             <div className="wrapper">
                 <Sidebar sideImg='Sidebar.svg'/>
-                <div>
+                <div className="actual">
                     <Input
                         value={value.body}
                         onChange={e => setValue({...value, body: e.target.value})}

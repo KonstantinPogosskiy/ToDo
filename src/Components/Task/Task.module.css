@@ -6,7 +6,6 @@
     margin: 8px 0 0 0;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08);
 }
-
 .checkbox {
     display: flex;
     width: 1%;
@@ -39,8 +38,12 @@
     background: none;
     padding: 0;
 }
-
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 1275px) {
+    .task {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 650px) {
     .task {
         width: 100%;
     }

@@ -1,5 +1,5 @@
 .completed_area {
-    width: 530px;
+    width: 30%;
     margin: 24px 8px 0 46px;
 }
 .completed_tasks {
@@ -18,7 +18,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 650px) {
     .completed_area {
         width: 85%;
     }

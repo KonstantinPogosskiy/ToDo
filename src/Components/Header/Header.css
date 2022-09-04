@@ -37,7 +37,7 @@
     font-size: 14px;
     margin: 0 8px 0 0;
 }
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 650px) {
     .desk {
         width: 40%;
         margin: auto 0;

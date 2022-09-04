@@ -1,15 +1,20 @@
 .input {
-    width: 1156px;
+    width: 88%;
     height: 40px;
     font-size: 14px;
     border: 1px solid rgba(236, 236, 236, 1);
     padding: 0 0 0 14px;
-    margin: 24px 8px 0 24px;
+    margin: 24px 1% 0 24px;
     outline: none;
 }
-
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 1275px) {
     .input {
-        width: 72%;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 955px) {
+    .input {
+        margin: 24px 3% 0 24px;
+        width: 71%;
     }
 }
